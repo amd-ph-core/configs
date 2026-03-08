@@ -1,0 +1,86 @@
+process {
+    withName: MULTIQC {
+        container = 'cdc-amd/multiqc:1.31_1524da8_v3'
+    }
+    withName: GATK4_FILTERMUTECTCALLS {
+        container = 'cdc-amd/gatk:4.6.2.0_01dac55_v7'
+    }
+    withName: VARPIPE_REPORT {
+        container = 'cdc-amd/python:3.12-tb_716b886_v4'
+    }
+    withName: PICARD_CREATESEQUENCEDICTIONARY {
+        container = 'cdc-amd/picard:3.4.0_ac49616_v8'
+    }
+    withName: VARPIPE_BWAMEM {
+        container = 'cdc-amd/bwa:0.7.19_639f31d_v9'
+    }
+    withName: PICARD_BUILDBAMINDEX {
+        container = 'cdc-amd/picard:3.4.0_ac49616_v8'
+    }
+    withName: VARPIPE_INTERPRETATION {
+        container = 'cdc-amd/python:3.12-tb_716b886_v4'
+    }
+    withName: PICARD_MARKDUPLICATES {
+        container = 'cdc-amd/picard:3.4.0_ac49616_v8'
+    }
+    withName: CAT_FASTQ {
+        container = 'cdc-amd/ubuntu:24.04_e2e9f67_v9'
+    }
+    withName: BWA_INDEX {
+        container = 'cdc-amd/bwa:0.7.19_639f31d_v9'
+    }
+    withName: VARPIPE_COVERAGEANALYSIS {
+        container = 'cdc-amd/python:3.12-tb_716b886_v4'
+    }
+    withName: SAMTOOLS_VIEW {
+        container = 'cdc-amd/samtools:1.22.1_cc13003_v8'
+    }
+    withName: VARPIPE_TAR {
+        container = 'cdc-amd/ubuntu:24.04_e2e9f67_v9'
+    }
+    withName: SAMTOOLS_FAIDX {
+        container = 'cdc-amd/samtools:1.22.1_cc13003_v8'
+    }
+    withName: CLOCKWORK_MINIMAP2 {
+        container = 'cdc-amd/minimap2:2.30_3457b81_v6'
+    }
+    withName: VARPIPE_LINEAGE {
+        container = 'cdc-amd/python:3.12-tb_716b886_v4'
+    }
+    withName: VARPIPE_STRUCTURALVARIANTS {
+        container = 'cdc-amd/python:3.12-tb_716b886_v4'
+    }
+    withName: SAMTOOLS_DEPTH {
+        container = 'cdc-amd/samtools:1.22.1_cc13003_v8'
+    }
+    withName: GATK4_MUTECT2 {
+        container = 'cdc-amd/gatk:4.6.2.0_01dac55_v7'
+    }
+    withName: VARPIPE_PDF {
+        container = 'cdc-amd/python:3.12-tb_716b886_v4'
+    }
+    withName: TRIMMOMATIC {
+        container = 'cdc-amd/trimmomatic:0.39_cc5ff96_v4'
+    }
+    withName: VARPIPE_PARSEANNOTATIONS {
+        container = 'cdc-amd/python:3.12-tb_716b886_v4'
+    }
+    withName: VARPIPE_CREATEANNOTATIONS {
+        container = 'cdc-amd/python:3.12-tb_716b886_v4'
+    }
+    withName: SNPEFF_SNPEFF {
+        container = 'cdc-amd/snpeff:5.2f_b1412d0_v10'
+    }
+    withName: GATK4_LEFTALIGNANDTRIMVARIANTS {
+        container = 'cdc-amd/gatk:4.6.2.0_01dac55_v7'
+    }
+    withName: CLOCKWORK_REMOVECONTAM {
+        container = 'cdc-amd/crc:0.12.5_ed2e676_v10'
+    }
+    withName: PICARD_SORTSAM {
+        container = 'cdc-amd/picard:3.4.0_ac49616_v8'
+    }
+    withName: PICARD_SAMFORMATCONVERTER {
+        container = 'cdc-amd/picard:3.4.0_ac49616_v8'
+    }
+}
